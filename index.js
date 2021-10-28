@@ -1,9 +1,10 @@
 var express  = require('express');
 var socket = require('socket.io');
+var PORT = process.env.PORT || 6001;
 
 //App setup
 var app = express();
-var server = app.listen(6001, function(){console.log("Puerto 6001");});
+var server = app.listen(PORT, function(){console.log("Puerto " + PORT);});
 
 //Static files
 app.use(express.static('public'));
